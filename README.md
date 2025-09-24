@@ -76,7 +76,7 @@ In other words, JDK = JRE + development tools.
 | **Inheritance**                  | `Person.java` (abstract) → extended by `Student.java`, `Instructor.java` |
 | **Abstraction**                  | `Person.java` (abstract class with abstract method `getRole()`) |
 | **Polymorphism**                 | Overridden `getRole()`, `toString()` in `Student.java` & `Instructor.java` |
-| **Interfaces**                   | `StudentService.java`, `CourseService.java`, etc.             |
+| **Interfaces**                   | `StudentService.java`, `CourseService.java`,`EnrollmentService.java`,`ReportService.java` etc.             |
 | **Singleton Pattern**            | `AppConfig.java` (ensures single instance for storing students & courses) |
 | **Custom Exceptions**            | `DuplicateEnrollmentException.java`, `MaxCreditLimitExceededException.java` |
 | **Exception Handling**           | `CampusApp.java` (try/catch in enrollment, import/export)      |
@@ -90,4 +90,41 @@ In other words, JDK = JRE + development tools.
 | **Assertions**                   | `Course.java` constructor (`assert credits > 0 && credits <= 18`) |
 | **Arrays & Array Utilities**     | `courseservice.java`, sorting examples with `Arrays.sort()` |
 
+##  Notes on Enabling Assertions
 
+Assertions are used in the project to enforce invariants.  
+For example, in `Course.java` constructor:
+
+```java
+assert credits > 0 && credits <= 18 : "Credits must be between 1 and 18";
+```
+
+## Eclipse Setup Steps
+### Step 1: Download Eclipse
+Go to the official website: `https://www.eclipse.org/downloads/`
+Click on Download x86_64 for your OS (Windows/Linux/macOS).
+You’ll get an installer (eclipse-inst-jre-win64.exe for Windows).
+<img width="1543" height="992" alt="image" src="https://github.com/user-attachments/assets/47184906-97ee-4f4c-a722-9ddbeee38a2f" />
+
+### Step 2: Run the Installer
+Open the installer → it shows different Eclipse packages.
+Select Eclipse IDE for Java Developers.
+<img width="1164" height="611" alt="image" src="https://github.com/user-attachments/assets/b81443c3-1c14-4e0c-9abf-c27bfc7cbeb9" />
+
+### Step 3: Choose Installation Folder
+Select a folder (default: `C:\Users\<username>\eclipse`).
+Click Install → accept the license.
+
+### Step 4: Launch Eclipse
+After installation, click Launch.
+On first run, Eclipse asks for a workspace location (where your projects will be stored).
+Example: `C:\Users\<username>\eclipse-workspace`.
+Check Use this as the default → Click Launch.
+
+### Step 5: Welcome Screen
+You’ll see the Eclipse Welcome page. Close it to enter the coding environment.
+
+### Step 6: Create Your First Java Project
+Go to File > New > Java Project.
+Give a project name (e.g., HelloWorld).
+Click Finish.
