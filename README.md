@@ -68,4 +68,26 @@ Debuggers, jar packagers, etc.
 Required if you are writing or developing Java applications.
 In other words, JDK = JRE + development tools.
 
+## Mapping Table (Syllabus → Code)
+
+| Syllabus Topic                  | Where Implemented (File / Class / Method)                     |
+|---------------------------------|----------------------------------------------------------------|
+| **Encapsulation**                | All domain classes (private fields + getters/setters, e.g., `Student.java`, `Course.java`) |
+| **Inheritance**                  | `Person.java` (abstract) → extended by `Student.java`, `Instructor.java` |
+| **Abstraction**                  | `Person.java` (abstract class with abstract method `getRole()`) |
+| **Polymorphism**                 | Overridden `getRole()`, `toString()` in `Student.java` & `Instructor.java` |
+| **Interfaces**                   | `StudentService.java`, `CourseService.java`, etc.             |
+| **Singleton Pattern**            | `AppConfig.java` (ensures single instance for storing students & courses) |
+| **Custom Exceptions**            | `DuplicateEnrollmentException.java`, `MaxCreditLimitExceededException.java` |
+| **Exception Handling**           | `CampusApp.java` (try/catch in enrollment, import/export)      |
+| **Checked & Unchecked Exceptions** | Service layer throws custom exceptions; CLI catches & prints  |
+| **Date/Time API**                | `Student.java` (admissionDate as `LocalDate`), `BackupService.java` (timestamp folders) |
+| **Enums**                        | `Grade.java` (stores points), `Semester.java` (SPRING, SUMMER, FALL, WINTER) |
+| **Streams / Lambdas**            | `CourseServiceImpl.java` (filtering by instructor/department), `CampusApp.gpaReportUI()` |
+| **Recursion**                    | `BackupService.getDirSize()` and `util/RecursionUtils.java`    |
+| **File I/O (NIO.2)**             | `ImportExportService.java`, `BackupService.java` (Files, Paths APIs) |
+| **Anonymous Inner Class**        | Example comparator in CLI for sorting students                 |
+| **Assertions**                   | `Course.java` constructor (`assert credits > 0 && credits <= 18`) |
+| **Arrays & Array Utilities**     | `courseservice.java`, sorting examples with `Arrays.sort()` |
+
 
